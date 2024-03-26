@@ -1,0 +1,33 @@
+{
+  "name": "kpm",
+  "version": "0.0.1",
+  "description": "KPM - Simple yet useful linux Package Manager to manage portable packages.",
+  "main": "./src/main.mjs",
+  "bin": {
+    "kpm": "./dist/kpm.cjs"
+  },
+  "scripts": {
+    "start": "node ./dist/kpm.cjs",
+    "dev": "node ./src/main.mjs",
+    "build": "esbuild ./src/main.mjs --bundle --platform=node --outfile=./dist/kpm.cjs --minify --target=node18 --format=cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemzops/kpm.git"
+  },
+  "keywords": ["kpm"],
+  "author": "kemzops",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/kemzops/kpm/issues"
+  },
+  "homepage": "https://github.com/kemzops/kpm#readme",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.20.2"
+  }
+}
