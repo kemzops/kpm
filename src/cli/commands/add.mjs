@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import fetch from "../../utils/fetch.mjs";
+import fetch from "../../utils/fetchJSON.mjs";
 
 const addCommand = new Command("add");
 addCommand.description(
