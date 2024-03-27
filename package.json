@@ -24,7 +24,6 @@
   "homepage": "https://github.com/kemzops/kpm#readme",
   "dependencies": {
     "commander": "^12.0.0",
-    "fs-extra": "^11.2.0",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {

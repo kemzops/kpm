@@ -1,4 +1,4 @@
-import { Command } from "commander";
+import { program } from "commander";
 
 import {
   PREFIX,
@@ -17,9 +17,7 @@ import {
 
 import { messages } from "../configs/messages.mjs";
 
-const kpm = new Command();
-
-kpm
+program
   .name("kpm")
   .description(
     "KPM - Simple yet useful linux Package Manager to manage portable packages."
@@ -27,7 +25,7 @@ kpm
   .version(VERSION, "-v, --version")
 
 // Commands
-import add from "./commands/add.mjs";
-add(kpm)
+import addCommand from "./commands/add.mjs";
+program.addCommand(addCommand);
 
-export default kpm;
+export default program;
