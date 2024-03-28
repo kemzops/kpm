@@ -2,6 +2,8 @@ import os from "os";
 import path from "path";
 
 export const PREFIX = "\x1b[1;33m[KPM]\x1b[0m";
+export const DESCRIPTION =
+  "Simple yet useful linux Package Manager to manage portable packages.";
 export const VERSION = "0.0.1";
 
 export const homeDir = os.homedir();

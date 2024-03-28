@@ -2,6 +2,7 @@ import { program } from "commander";
 
 import {
   PREFIX,
+  DESCRIPTION,
   VERSION,
   homeDir,
   kpmDir,
@@ -17,12 +18,7 @@ import {
 
 import { messages } from "../configs/messages.mjs";
 
-program
-  .name("kpm")
-  .description(
-    "KPM - Simple yet useful linux Package Manager to manage portable packages."
-  )
-  .version(VERSION, "-v, --version")
+program.name("kpm").description(DESCRIPTION).version(VERSION, "-v, --version");
 
 // Commands
 import addCommand from "./commands/add.mjs";
