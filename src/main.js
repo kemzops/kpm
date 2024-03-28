@@ -24,9 +24,9 @@ import {
   packagesFile,
   downloadsFile,
   releasesFile,
-} from "./configs/variables.mjs";
+} from "./configs/variables.js";
 
-import { messages } from "./configs/messages.mjs";
+import { messages } from "./configs/messages.js";
 
 // make sure we have the required directories and files
 try {
@@ -47,11 +47,11 @@ try {
     fs.writeFileSync(releasesFile, JSON.stringify([]));
 } catch (err) {
   console.error(
-    `${messages.error} ${messages.unexpectedError}\n${err}\n${PREFIX} ${messages.exit}`
+    `${messages.unexpectedError}\n${err}\n${messages.exit}`
   );
   process.exit(1);
 }
 
 // KPM CLI
-import cli from "./cli/cli.mjs";
+import cli from "./cli/cli.js";
 cli.parse(process.argv);

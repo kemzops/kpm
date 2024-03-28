@@ -1,10 +1,17 @@
 import os from "os";
 import path from "path";
 
-export const PREFIX = "\x1b[1;33m[KPM]\x1b[0m";
+export const PREFIX = "\x1b[1;33m[KPM]\x1b[0m ";
 export const DESCRIPTION =
   "Simple yet useful linux Package Manager to manage portable packages.";
 export const VERSION = "0.0.1";
+
+export const labels = {
+  error: "\x1b[31m[ERROR]\x1b[0m ",
+  warning: "\x1b[33m[WARNING]\x1b[0m ",
+  info: "\x1b[34m[INFO]\x1b[0m ",
+  success: "\x1b[32m[SUCCESS]\x1b[0m ",
+};
 
 export const homeDir = os.homedir();
 export const kpmDir = path.join(homeDir, ".kpm"); // main Dir
